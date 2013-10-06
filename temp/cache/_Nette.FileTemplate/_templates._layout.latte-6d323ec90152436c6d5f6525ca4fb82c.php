@@ -1,30 +1,30 @@
-<?php //netteCache[01]000369a:2:{s:4:"time";s:21:"0.58416500 1381069462";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:49:"C:\xampp\htdocs\nette\app\templates\@layout.latte";i:2;i:1381069429;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:28:"$WCREV$ released on $WCDATE$";}}}?><?php
+<?php //netteCache[01]000369a:2:{s:4:"time";s:21:"0.13981200 1381085785";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:49:"C:\xampp\htdocs\nette\app\templates\@layout.latte";i:2;i:1381085723;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:28:"$WCREV$ released on $WCDATE$";}}}?><?php
 
 // source file: C:\xampp\htdocs\nette\app\templates\@layout.latte
 
 ?><?php
 // prolog Nette\Latte\Macros\CoreMacros
-list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, '1ubtbaiqdu')
+list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, 'dz0hm7csj5')
 ;
 // prolog Nette\Latte\Macros\UIMacros
 //
 // block title
 //
-if (!function_exists($_l->blocks['title'][] = '_lbe16937badd_title')) { function _lbe16937badd_title($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['title'][] = '_lbc2f5d84768_title')) { function _lbc2f5d84768_title($_l, $_args) { extract($_args)
 ?>Nette Application Skeleton<?php
 }}
 
 //
 // block head
 //
-if (!function_exists($_l->blocks['head'][] = '_lb91e2c64640_head')) { function _lb91e2c64640_head($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['head'][] = '_lb120b028da4_head')) { function _lb120b028da4_head($_l, $_args) { extract($_args)
 ;
 }}
 
 //
 // block scripts
 //
-if (!function_exists($_l->blocks['scripts'][] = '_lb46c0b6462d_scripts')) { function _lb46c0b6462d_scripts($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['scripts'][] = '_lbb79b8047b0_scripts')) { function _lbb79b8047b0_scripts($_l, $_args) { extract($_args)
 ?>	<script src="<?php echo htmlSpecialChars($basePath) ?>/js/jquery.js"></script>
 	<script src="<?php echo htmlSpecialChars($basePath) ?>/js/netteForms.js"></script>
 	<script src="<?php echo htmlSpecialChars($basePath) ?>/js/main.js"></script>
@@ -91,7 +91,7 @@ ob_start(); call_user_func(reset($_l->blocks['title']), $_l, get_defined_vars())
 
   <script> document.documentElement.className+=' js' </script>
 
-<?php $iterations = 0; foreach ($flashes as $flash): ?>  <div class="flash <?php echo htmlSpecialChars($flash->type) ?>
+<?php $iterations = 0; foreach ($flashes as $flash): ?>  <div class="alert alert-<?php echo htmlSpecialChars($flash->type) ?>
 "><?php echo Nette\Templating\Helpers::escapeHtml($flash->message, ENT_NOQUOTES) ?></div>
 <?php $iterations++; endforeach ?>
 
