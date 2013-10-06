@@ -15,8 +15,6 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 	    // FileCollection v konstruktoru může dostat výchozí adresář, pak není potřeba psát absolutní cesty
 	    $files = new \WebLoader\FileCollection(WWW_DIR . '/css');
 	    $files->addFiles(array(
-	        'screen.css',
-	        'print.css',
 	        'bootstrap-3.0.0/less/bootstrap.less', // compiles bootstrap.css
 	        'bootstrap-3.0.0/less/variables.less', // check if we changed this
 
