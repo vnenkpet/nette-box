@@ -6,10 +6,10 @@ Extended Nette sandbox application template with Twitter Bootstrap 3.0.0 ready f
 Includes:
 
 - Twitter Bootstrap 3.0.0
+- Twitter Bootstrap starter template
 - Font Awesome iconic font set
-- Nette Webloader addon 
-- Sample jumbotron template
-- Eyecon bootstrap slider
+- Nette Webloader addon
+- Eyecon Bootstrap sliders
 
 
 

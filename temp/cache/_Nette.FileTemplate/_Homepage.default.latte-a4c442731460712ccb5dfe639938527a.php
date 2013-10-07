@@ -1,26 +1,22 @@
-<?php //netteCache[01]000378a:2:{s:4:"time";s:21:"0.99746100 1381135473";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:58:"C:\xampp\htdocs\nette\app\templates\Homepage\default.latte";i:2;i:1381135469;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:28:"$WCREV$ released on $WCDATE$";}}}?><?php
+<?php //netteCache[01]000378a:2:{s:4:"time";s:21:"0.00385500 1381136425";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:58:"C:\xampp\htdocs\nette\app\templates\Homepage\default.latte";i:2;i:1381136294;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:28:"$WCREV$ released on $WCDATE$";}}}?><?php
 
 // source file: C:\xampp\htdocs\nette\app\templates\Homepage\default.latte
 
 ?><?php
 // prolog Nette\Latte\Macros\CoreMacros
-list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, 'ww9titn7mh')
+list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, 'proeyo834u')
 ;
 // prolog Nette\Latte\Macros\UIMacros
 //
 // block content
 //
-if (!function_exists($_l->blocks['content'][] = '_lbf7f4a6c63d_content')) { function _lbf7f4a6c63d_content($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['content'][] = '_lbbc03599c4f_content')) { function _lbbc03599c4f_content($_l, $_args) { extract($_args)
 ?>    <div class="container">
 
       <div class="starter-template">
         <h1>Nette &amp; Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br /> All you get is this text and a mostly barebones HTML document.</p>
       </div>
-
-		<input type="text" id="foo" class="span2" value="" data-slider-min="-20" data-slider-max="20" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="hide" />
-		<hr />
-		<input type="text" id="bar" />
 
     </div><!-- /.container -->
 
@@ -31,14 +27,8 @@ if (!function_exists($_l->blocks['content'][] = '_lbf7f4a6c63d_content')) { func
 //
 // block scripts
 //
-if (!function_exists($_l->blocks['scripts'][] = '_lba405fc0fe6_scripts')) { function _lba405fc0fe6_scripts($_l, $_args) { extract($_args)
-?>    <script>
-    $('#foo').slider()
-	  .on('slide', function(ev){
-	     $('#bar').val(ev.value);
-	  });
-    </script>
-<?php
+if (!function_exists($_l->blocks['scripts'][] = '_lbdf5c9cabae_scripts')) { function _lbdf5c9cabae_scripts($_l, $_args) { extract($_args)
+;
 }}
 
 //
