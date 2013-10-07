@@ -20,7 +20,7 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 	    	'screen.css',
 	        'bootstrap-3.0.0/less/bootstrap.less', // compiles bootstrap.css
 	        'bootstrap-3.0.0/less/variables.less', // checks if variables.less has changed (it wouldnt recompile bootstrap.less if it didnt know)
-
+	        'slider/less/slider.less' // bootstrap sliders
 	    ));
 
 	    // pass the files collection to the compiler and set output path

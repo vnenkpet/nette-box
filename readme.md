@@ -9,6 +9,7 @@ Includes:
 - Font Awesome iconic font set
 - Nette Webloader addon 
 - Sample jumbotron template
+- Eyecon bootstrap slider
 
 
 
@@ -16,6 +17,7 @@ Installation
 ------------
 
 Just clone the repository to your local web server.
+
 
 
 User's Guide
