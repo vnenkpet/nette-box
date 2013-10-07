@@ -16,7 +16,11 @@ Includes:
 Installation
 ------------
 
-Just clone the repository to your local web server.
+Just clone the repository to your local web server and run:
+
+```
+php composer.phar update
+```
 
 
 
