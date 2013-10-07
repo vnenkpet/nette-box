@@ -27,4 +27,4 @@ php composer.phar update
 User's Guide
 ------------
 
-You can directly change variables in www/bootstrap-3.0.0/less/variables.less which then auto-compiles the bootstrap.less and all files from www/css folders into www/webtemp directory as a single minified CSS file.
+You can directly change variables in _www/bootstrap-3.0.0/less/variables.less_ which then auto-compiles the _bootstrap.less_ and all files from _www/css_ directory into _www/webtemp_ directory as a single minified CSS file.
