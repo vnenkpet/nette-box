@@ -1,7 +1,7 @@
 log/*
 temp/*
 www/webtemp/*
-# libs/*
+libs/*
 # vendor/*
 # !vendor/others
 
