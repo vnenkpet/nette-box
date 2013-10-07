@@ -62,12 +62,8 @@
     {include #content}
 
 
-	{block scripts}
-	<script src="{$basePath}/js/jquery.js"></script>
-	<script src="{$basePath}/js/netteForms.js"></script>
-	<script src="{$basePath}/js/main.js"></script>
-	<script src="{$basePath}/bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>
-  <script src="{$basePath}/slider/js/bootstrap-slider.js"></script>
-  {/block}
+  {* load Javascripts *}
+	{control js}
+  {block scripts}{/block}
   </body>
 </html>

@@ -20,7 +20,7 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 	    	'screen.css',
 	        'bootstrap-3.0.0/less/bootstrap.less', // compiles bootstrap.css
 	        'bootstrap-3.0.0/less/variables.less', // checks if variables.less has changed (it wouldnt recompile bootstrap.less if it didnt know)
-	        'slider/less/slider.less' // bootstrap sliders
+	        'slider/css/slider.css' // bootstrap sliders
 	    ));
 
 	    // pass the files collection to the compiler and set output path
@@ -36,6 +36,27 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 
 	    // nette komponenta pro výpis <link>ů přijímá kompilátor a cestu k adresáři na webu
 	    return new \WebLoader\Nette\CssLoader($compiler, $this->template->basePath . '/webtemp');
+	}
+
+	/**
+	* Creates a Javascript loader component.
+	*/
+	public function createComponentJs()
+	{
+	    $files = new \WebLoader\FileCollection(WWW_DIR . '/js');
+	    
+	    $files->addFiles(array(
+	    	'jquery.js', 
+	    	'main.js', 
+	    	'netteForms.js',
+	    	'slider/js/bootstrap-slider.js',
+	    	'bootstrap-3.0.0/dist/js/bootstrap.min.js',
+	    	
+	    ));
+
+	    $compiler = \WebLoader\Compiler::createJsCompiler($files, WWW_DIR . '/webtemp');
+
+	    return new \WebLoader\Nette\JavaScriptLoader($compiler, $this->template->basePath . '/webtemp');
 	}
 
 }

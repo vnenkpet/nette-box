@@ -1,35 +1,31 @@
-<?php //netteCache[01]000369a:2:{s:4:"time";s:21:"0.47976800 1381134290";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:49:"C:\xampp\htdocs\nette\app\templates\@layout.latte";i:2;i:1381134287;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:28:"$WCREV$ released on $WCDATE$";}}}?><?php
+<?php //netteCache[01]000369a:2:{s:4:"time";s:21:"0.21620100 1381136256";s:9:"callbacks";a:2:{i:0;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:9:"checkFile";}i:1;s:49:"C:\xampp\htdocs\nette\app\templates\@layout.latte";i:2;i:1381136252;}i:1;a:3:{i:0;a:2:{i:0;s:19:"Nette\Caching\Cache";i:1;s:10:"checkConst";}i:1;s:25:"Nette\Framework::REVISION";i:2;s:28:"$WCREV$ released on $WCDATE$";}}}?><?php
 
 // source file: C:\xampp\htdocs\nette\app\templates\@layout.latte
 
 ?><?php
 // prolog Nette\Latte\Macros\CoreMacros
-list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, 'p2oh482cr9')
+list($_l, $_g) = Nette\Latte\Macros\CoreMacros::initRuntime($template, 'zcvbwws8ni')
 ;
 // prolog Nette\Latte\Macros\UIMacros
 //
 // block title
 //
-if (!function_exists($_l->blocks['title'][] = '_lb47a2708e1e_title')) { function _lb47a2708e1e_title($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['title'][] = '_lb7a262bccb1_title')) { function _lb7a262bccb1_title($_l, $_args) { extract($_args)
 ?>Nette Application Skeleton<?php
 }}
 
 //
 // block head
 //
-if (!function_exists($_l->blocks['head'][] = '_lb695f2362d2_head')) { function _lb695f2362d2_head($_l, $_args) { extract($_args)
+if (!function_exists($_l->blocks['head'][] = '_lbcdd73da268_head')) { function _lbcdd73da268_head($_l, $_args) { extract($_args)
 ;
 }}
 
 //
 // block scripts
 //
-if (!function_exists($_l->blocks['scripts'][] = '_lbb833adca01_scripts')) { function _lbb833adca01_scripts($_l, $_args) { extract($_args)
-?>	<script src="<?php echo htmlSpecialChars($basePath) ?>/js/jquery.js"></script>
-	<script src="<?php echo htmlSpecialChars($basePath) ?>/js/netteForms.js"></script>
-	<script src="<?php echo htmlSpecialChars($basePath) ?>/js/main.js"></script>
-	<script src="<?php echo htmlSpecialChars($basePath) ?>/bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>
-<?php
+if (!function_exists($_l->blocks['scripts'][] = '_lb87bdbc0580_scripts')) { function _lb87bdbc0580_scripts($_l, $_args) { extract($_args)
+;
 }}
 
 //
@@ -112,6 +108,8 @@ ob_start(); call_user_func(reset($_l->blocks['title']), $_l, get_defined_vars())
 <?php Nette\Latte\Macros\UIMacros::callBlock($_l, 'content', $template->getParameters()) ?>
 
 
-<?php call_user_func(reset($_l->blocks['scripts']), $_l, get_defined_vars())  ?>
+<?php $_ctrl = $_control->getComponent("js"); if ($_ctrl instanceof Nette\Application\UI\IRenderable) $_ctrl->validateControl(); $_ctrl->render() ?>
+  <?php call_user_func(reset($_l->blocks['scripts']), $_l, get_defined_vars())  ?>
+
   </body>
 </html>
