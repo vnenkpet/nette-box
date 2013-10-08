@@ -1,4 +1,4 @@
- {* Template file. You can delete this. *}
+ {* Template file. Delete this code. *}
 
 {block head}
 <style>
@@ -12,7 +12,7 @@
 	}
 
 	code {
-		color: #f50;
+		color: #0a5;
 	}
 </style>
 {/block head}
@@ -22,21 +22,36 @@
     <div class="container">
 
       <div class="starter-template">
+
+      <p class="text-left">
+      	<i class="icon-file"></i> <code>app/templates/Homepage/default.latte</code> <span class="text-muted"><small>(You can delete this code.)</small></span>
+      </p>
+
         <h1>Nette &amp; Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.</p>
+
+      	<p>
+	      <strong>Installation:</strong> <code class="well well-sm">git clone http://github.com/vnenkpet/nette-sandbox-with-bootstrap; cd nette-sandbox-with-bootstrap; php composer.phar update</code>
+    	   | <a href="http://github.com/vnenkpet/nette-sandbox-with-bootstrap">On Github <i class="icon-external-link"></i></a>
+      	</p>
+      	<br />
         <p>Includes: 
-        <a href="http://www.nette.org"> Nette framework</a>, 
-        <a href="http://getbootstrap.com"> Bootstrap 3</a>, 
-        <a href="http://www.eyecon.ro/bootstrap-slider/"> Bootstrap sliders</a>, 
-        <a href="http://www.jqplot.com"> JQPlot charts library</a>, 
-        <a href="http://fortawesome.github.io/Font-Awesome/"> Font Awesome iconic font</a>, 
-        <a href="http://addons.nette.org/cs/webloader"> configured Nette webloader</a></p>
+        <a href="http://www.nette.org"><span class="label label-info">Nette framework <i class="icon-external-link"></i></span></a>
+        <a href="http://getbootstrap.com"><span class="label label-info">Twitter Bootstrap <i class="icon-external-link"></i></span></a>
+        <a href="http://www.eyecon.ro/bootstrap-slider/"><span class="label label-info">Eyecon Bootstrap sliders <i class="icon-external-link"></i></span></a>
+        <a href="http://www.jqplot.com"><span class="label label-info"> JQPlot charts library <i class="icon-external-link"></i></span></a>
+        <a href="http://fortawesome.github.io/Font-Awesome/"><span class="label label-info"> Font Awesome iconic font <i class="icon-external-link"></i></span></a>
+        <a href="http://addons.nette.org/cs/webloader"><span class="label label-info"> configured Nette webloader <i class="icon-external-link"></i></span></a></p>
+      	
+
+
       </div>
 
 
       <div class="row">
       	<div class="col-md-7">
-	      	<h2><i class="icon-flag"></i> Font-Awesome icons</h2>
+	      	<h2><i class="icon-flag"></i> Font Awesome Icons</h2>
+	      	<p>Just a few examples:</p>
 	      	<p>
 	      		<table class="table table-striped icons-preview">
 	      			<thead>
@@ -48,8 +63,8 @@
 	      					<td><code>&lt;i class="icon-pencil"&gt;&lt;/i&gt; Pencil</code></td>
 	      				</tr>
 	      				<tr>
-	      					<td><strong>Bar chart <i class="icon-bar-chart"></i></strong></td>
-	      					<td><code>&lt;strong&gt;Bar chart &lt;i class="icon-bar-chart"&gt;&lt;/i&gt;&lt;/strong&gt;</code></td>
+	      					<td>Bar chart <i class="icon-bar-chart"></i></td>
+	      					<td><code>Bar chart &lt;i class="icon-bar-chart"&gt;&lt;/i&gt;</code></td>
 	      				</tr>
 	      				<tr>
 	      					<td><span class="text-success"><i class="icon-ok"></i> Success</span></td>
@@ -60,23 +75,30 @@
 	      	</p>
 
 	      	<p class="text-right">
-	      		<small><a href="http://fortawesome.github.io/Font-Awesome/">Docs <i class="icon-external-link"></i></a></small>
+	      		<i class="icon-caret-right"></i> <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome documentation <i class="icon-external-link"></i></a>
 	      	</p>
 
       	</div>
       	<div class="col-md-5">
-      		<h2><i class="icon-bar-chart"></i> JQPlot test chart</h2>
+      		<h2><i class="icon-bar-chart"></i> JQPlot Test Chart</h2>
       		
+      		<p>Check <code>app/templates/Homepage/default.latte</code> javascripts at the bottom of the file.</p>
+
       		<div class="jqplot">
       			<div id="chartdiv" style="width: 100%; height: 200px;"></div>
       		</div>
       		<p class="text-right">
-      			<small><a href="http://www.jqplot.com">Docs <i class="icon-external-link"></i></a></small>
+      			<i class="icon-caret-right"></i> <a href="http://www.jqplot.com">JQPlot documentation <i class="icon-external-link"></i></a>
       		</p>
       	</div>
       </div>
 
+      	<footer>
+			&copy; Petr Vnenk, 2013
+		</footer>
+
     </div><!-- /.container -->
+
 
 
  {/block}
