@@ -10,19 +10,21 @@ Includes:
 - Font Awesome iconic font set
 - Nette Webloader addon
 - Eyecon Bootstrap sliders
+- JQplot charts library
 
 
 
 Installation
 ------------
 
-Just clone the repository to your local web server and run:
+Just clone the repository to your local web server and run composer update in your command line (recommended):
 
 ```
-php composer.phar update
+git clone https://github.com/vnenkpet/nette-sandbox-with-bootstrap.git;
+php composer.phar update;
 ```
 
-
+or download the zip file and only run the composer.
 
 User's Guide
 ------------
