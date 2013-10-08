@@ -20,7 +20,8 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 	    	'screen.css',
 	        'bootstrap-3.0.0/less/bootstrap.less', // compiles bootstrap.css
 	        'bootstrap-3.0.0/less/variables.less', // checks if variables.less has changed (it wouldnt recompile bootstrap.less if it didnt know)
-	        'slider/css/slider.css' // bootstrap sliders
+	        'slider/css/slider.css', // bootstrap sliders
+	        'jqplot/dist/jquery.jqplot.min.css' // jqplot charts stylesheet
 	    ));
 
 	    // pass the files collection to the compiler and set output path
@@ -46,12 +47,12 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 	    $files = new \WebLoader\FileCollection(WWW_DIR . '/js');
 	    
 	    $files->addFiles(array(
-	    	'jquery.js', 
-	    	'main.js', 
-	    	'netteForms.js',
-	    	'slider/js/bootstrap-slider.js',
-	    	'bootstrap-3.0.0/dist/js/bootstrap.min.js',
-	    	
+	    	'jquery.js', // JQuery
+	    	'main.js', // Main JS application file
+	    	'netteForms.js', // Ajax Forms
+	    	'bootstrap-3.0.0/dist/js/bootstrap.min.js', // Bootstrap javascripts
+	    	'slider/js/bootstrap-slider.js', // Bootstrap input sliders
+	    	'jqplot/dist/jquery.jqplot.min.js' // Charts
 	    ));
 
 	    $compiler = \WebLoader\Compiler::createJsCompiler($files, WWW_DIR . '/webtemp');
