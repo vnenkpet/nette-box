@@ -21,6 +21,7 @@ Just clone the repository to your local web server and run composer update in yo
 
 ```
 git clone https://github.com/vnenkpet/nette-sandbox-with-bootstrap.git;
+cd nette-sandbox-with-bootstrap;
 php composer.phar update;
 ```
 
