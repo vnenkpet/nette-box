@@ -1,6 +1,6 @@
 {
-	"name": "vnenkpet/nette-sandbox-with-bootstrap",
-	"description": "The sandbox is a pre-packaged Nette Framework project including many front-end libraries, basic configured structure for your application. Based on David Grudl's Nette Sandbox.",
+	"name": "vnenkpet/nette-box",
+	"description": "This sandbox is a pre-packaged Nette Framework project including many front-end libraries, basic configured structure for your application. Based on David Grudl's Nette Sandbox.",
 	"homepage": "http://www.petrvnenk.com",
 	"type": "project",
 	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
