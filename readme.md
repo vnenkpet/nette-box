@@ -22,7 +22,7 @@ Just install the composer package onto your local web server and run composer up
 ```
 composer create-project vnenkpet/nette-sandbox-with-bootstrap myProject;
 cd myProject;
-php composer.phar update;
+composer update;
 ```
 
 or download the zip file and only update the composer.
