@@ -20,9 +20,7 @@ Installation
 Just install the composer package onto your local web server and run composer update in your command line (recommended):
 
 ```
-composer create-project vnenkpet/nette-sandbox-with-bootstrap myProject;
-cd myProject;
-composer update;
+composer create-project vnenkpet/nette-sandbox-with-bootstrap myProject
 ```
 
 or download the zip file and only update the composer.
