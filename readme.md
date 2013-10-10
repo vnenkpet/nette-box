@@ -20,7 +20,7 @@ Installation
 Via composer:
 
 ```
-composer create-project vnenkpet/nette-sandbox-with-bootstrap myProject
+composer create-project vnenkpet/nette-box myProject
 ```
 
 or just download the zip file and update via composer.
