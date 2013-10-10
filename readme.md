@@ -17,13 +17,13 @@ Includes:
 Installation
 ------------
 
-Just install the composer package onto your local web server and run composer update in your command line (recommended):
+Via composer:
 
 ```
 composer create-project vnenkpet/nette-sandbox-with-bootstrap myProject
 ```
 
-or download the zip file and only update the composer.
+or just download the zip file and update via composer.
 
 User's Guide
 ------------
