@@ -17,15 +17,15 @@ Includes:
 Installation
 ------------
 
-Just clone the repository to your local web server and run composer update in your command line (recommended):
+Just install the composer package onto your local web server and run composer update in your command line (recommended):
 
 ```
-git clone https://github.com/vnenkpet/nette-sandbox-with-bootstrap.git;
-cd nette-sandbox-with-bootstrap;
+composer create-project vnenkpet/nette-sandbox-with-bootstrap myProject;
+cd myProject;
 php composer.phar update;
 ```
 
-or download the zip file and only run the composer.
+or download the zip file and only update the composer.
 
 User's Guide
 ------------
