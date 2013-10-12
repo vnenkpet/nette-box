@@ -1,12 +1,25 @@
 <?php
 
-use \Nette\Utils\Finder;
-
 /**
- * Base presenter for all application presenters.
+ * Base class for all application presenters.
+ *
+ * @author     John Doe
+ * @package    MyApplication
  */
 abstract class BasePresenter extends Nette\Application\UI\Presenter
 {
+	/** @var Doctrine\ORM\EntityManager */
+	protected $em;
+
+	public function injectEntityManager(\Doctrine\ORM\EntityManager $em)
+	{
+		if ($this->em) {
+			throw new \Nette\InvalidStateException('Entity manager has already been set');
+		}
+		$this->em = $em;
+		return $this;
+	}
+
 
 	/**
 	* Creates a CSS loader component.
@@ -59,6 +72,4 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 
 	    return new \WebLoader\Nette\JavaScriptLoader($compiler, $this->template->basePath . '/webtemp');
 	}
-
 }
-	

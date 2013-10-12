@@ -23,7 +23,10 @@
 		"dg/adminer-custom": "1",
 		"JanMarek/WebLoader": "dev-master",
   		"leafo/lessphp": "dev-master#85bd4557920d5f4fcbf41beb621e91b842e3621b",
-  		"natxet/CssMin": "dev-master"
+  		"natxet/CssMin": "dev-master",
+  		"nella/doctrine": "@dev",
+		"nella/console": "@dev",
+		"doctrine/migrations": "@dev"
 	},
 	"require-dev": {
 		"nette/tester": "0.9.*"

@@ -1,56 +1,59 @@
 <?php
 
-use Nette\Application\UI;
+use Nette\Application\UI,
+	Nette\Security as NS;
 
 
 /**
  * Sign in/out presenters.
+ *
+ * @author     John Doe
+ * @package    MyApplication
  */
 class SignPresenter extends BasePresenter
 {
 
 
 	/**
-	 * Sign-in form factory.
+	 * Sign in form component factory.
 	 * @return Nette\Application\UI\Form
 	 */
 	protected function createComponentSignInForm()
 	{
 		$form = new UI\Form;
 		$form->addText('username', 'Username:')
-			->setRequired('Please enter your username.');
+			->setRequired('Please provide a username.');
 
 		$form->addPassword('password', 'Password:')
-			->setRequired('Please enter your password.');
+			->setRequired('Please provide a password.');
 
-		$form->addCheckbox('remember', 'Keep me signed in');
+		$form->addCheckbox('remember', 'Remember me on this computer');
 
 		$form->addSubmit('send', 'Sign in');
 
-		// call method signInFormSucceeded() on success
-		$form->onSuccess[] = $this->signInFormSucceeded;
+		$form->onSuccess[] = callback($this, 'signInFormSubmitted');
 		return $form;
 	}
 
 
-	public function signInFormSucceeded($form)
+
+	public function signInFormSubmitted($form)
 	{
-		$values = $form->getValues();
-
-		if ($values->remember) {
-			$this->getUser()->setExpiration('14 days', FALSE);
-		} else {
-			$this->getUser()->setExpiration('20 minutes', TRUE);
-		}
-
 		try {
+			$values = $form->getValues();
+			if ($values->remember) {
+				$this->getUser()->setExpiration('+ 14 days', FALSE);
+			} else {
+				$this->getUser()->setExpiration('+ 20 minutes', TRUE);
+			}
 			$this->getUser()->login($values->username, $values->password);
 			$this->redirect('Homepage:');
 
-		} catch (Nette\Security\AuthenticationException $e) {
+		} catch (NS\AuthenticationException $e) {
 			$form->addError($e->getMessage());
 		}
 	}
+
 
 
 	public function actionOut()

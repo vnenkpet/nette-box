@@ -7,4 +7,16 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'WebLoader' => array($vendorDir . '/janmarek/webloader'),
+    'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
+    'Nella\\Doctrine' => array($vendorDir . '/nella/doctrine'),
+    'Nella\\Console' => array($vendorDir . '/nella/console'),
+    'Doctrine\\ORM' => array($vendorDir . '/doctrine/orm/lib'),
+    'Doctrine\\DBAL\\Migrations' => array($vendorDir . '/doctrine/migrations/lib'),
+    'Doctrine\\DBAL' => array($vendorDir . '/doctrine/dbal/lib'),
+    'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
+    'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
+    'Doctrine\\Common\\Collections\\' => array($vendorDir . '/doctrine/collections/lib'),
+    'Doctrine\\Common\\Cache\\' => array($vendorDir . '/doctrine/cache/lib'),
+    'Doctrine\\Common\\Annotations\\' => array($vendorDir . '/doctrine/annotations/lib'),
+    'Doctrine\\Common\\' => array($vendorDir . '/doctrine/common/lib'),
 );
