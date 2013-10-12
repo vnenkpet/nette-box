@@ -5,6 +5,8 @@ Extended Nette sandbox application template with Twitter Bootstrap 3.0.0 ready f
 
 Includes:
 
+- Nette 2 Framework
+- Doctrine 2 ORM
 - Twitter Bootstrap 3.0.0
 - Twitter Bootstrap starter template
 - Font Awesome iconic font set
