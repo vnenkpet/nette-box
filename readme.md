@@ -1,41 +1,31 @@
-[Nette Framework](http://nette.org) & [Doctrine 2 ORM](http://www.doctrine-project.org/projects/orm.html) Sandbox
-=================================================================================================================
+Nette Doctrine Sandbox with Twitter Bootstrap (and more)
+===============================================
 
-With [Symfony Console](http://symfony.com/doc/current/components/console/index.html).
+Extended Nette sandbox application template with Twitter Bootstrap 3.0.0 ready for immediate implementation.
 
-Usage
------
+Includes:
+
+- Twitter Bootstrap 3.0.0
+- Twitter Bootstrap starter template
+- Font Awesome iconic font set
+- Nette Webloader addon
+- Eyecon Bootstrap sliders
+- JQplot charts library
+
+
+
+Installation
+------------
+
+Via composer:
 
 ```
-composer create-project vrtak-cz/nette-doctrine-sandbox yourNewProject
+composer create-project vnenkpet/nette-box myProject
 ```
 
-- *CLI*: `php www/index.php help`
-- *EntityManager*: `$context->database`
-- *Config*: "section" database in *parameters*.
+or just download the zip file and update via composer.
 
-License 
------
+User's Guide
+------------
 
-(The MIT License)
-
-Copyright (c) 2012 Patrik Votoček &lt;patrik@votocek.cz&gt;
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+You can directly change variables in _www/bootstrap-3.0.0/less/variables.less_ which then auto-compiles the _bootstrap.less_ and all files from _www/css_ directory into _www/webtemp_ directory as a single minified CSS file.
