@@ -1,5 +1,7 @@
 <?php
 
+use Nette\Utils\Finder;
+
 /**
  * Base class for all application presenters.
  *
@@ -34,7 +36,8 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 	        'bootstrap-3.0.0/less/bootstrap.less', // compiles bootstrap.css
 	        'bootstrap-3.0.0/less/variables.less', // checks if variables.less has changed (it wouldnt recompile bootstrap.less if it didnt know)
 	        'slider/css/slider.css', // bootstrap sliders
-	        'jqplot/dist/jquery.jqplot.min.css' // jqplot charts stylesheet
+	        'jqplot/dist/jquery.jqplot.min.css', // jqplot charts stylesheet
+	       	'jqplot.css'
 	    ));
 
 	    // pass the files collection to the compiler and set output path
@@ -67,6 +70,8 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 	    	'slider/js/bootstrap-slider.js', // Bootstrap input sliders
 	    	'jqplot/dist/jquery.jqplot.min.js' // Charts
 	    ));
+
+	    $files->addFiles(Finder::findFiles('*.js')->from(WWW_DIR . '/jqplot/dist/plugins')); // include jqplot plugins
 
 	    $compiler = \WebLoader\Compiler::createJsCompiler($files, WWW_DIR . '/webtemp');
 
