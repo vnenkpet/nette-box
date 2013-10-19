@@ -1,0 +1,50 @@
+
+.jqplot-target	{
+	background-color: none;
+} /*  for the plot target div.  These will be cascaded down to all plot elements according to css rules. */
+
+.jqplot-axis	{
+} /*  for all axe. */
+
+.jqplot-xaxis	{
+} /*  applied to the primary x axis only. */
+
+.jqplot-yaxis	{
+} /*  applied to the primary y axis only. */
+
+.jqplot-x2axis, .jqplot-x3axis, ...	{
+} /*  applied to the 2nd, 3rd, etc. x axis only. */
+
+.jqplot-y2axis, .jqplot-y3axis, ...	{
+} /*  applied to the 2nd, 3rd, etc.y axis only. */
+
+.jqplot-axis-tick	{
+} /*  applied to all axis tick. */
+
+.jqplot-xaxis-tick	{
+} /*  applied to primary x axis ticks only. */
+
+.jqplot-x2axis-tick	{
+} /*  applied to secondary x axis ticks only. */
+
+.jqplot-yaxis-tick	{
+} /*  applied to primary y axis ticks only. */
+
+.jqplot-y2axis-tick	{
+} /*  applied to secondary y axis ticks only. */
+
+table.jqplot-table-legend	{
+} /*  applied to the legend box table. */
+
+.jqplot-title	{
+} /*  applied to the title. */
+
+.jqplot-cursor-tooltip	{
+} /*  applied to the cursor toolti. */
+
+.jqplot-highlighter-tooltip	{
+} /*  applied to the highlighter tooltip. */
+
+div.jqplot-table-legend-swatch	{
+} /* the div element used for the colored swatch on the legend. */
+

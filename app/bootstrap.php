@@ -22,7 +22,7 @@ $configurator->setTempDirectory(__DIR__ . '/../temp');
 $configurator->createRobotLoader()
 	->addDirectory(APP_DIR)
 	->addDirectory(LIBS_DIR . '/janmarek/webloader/WebLoader/Filter') // add webloader filters
-	->addDirectory(LIBS_DIR . '/natxet') // add CssMin
+	->addDirectory(LIBS_DIR . '/natxet') // add CssMin filter for webloader
 	->register();
 
 \Nella\Console\Config\Extension::register($configurator);
