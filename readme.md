@@ -11,8 +11,7 @@ Includes:
 - Twitter Bootstrap starter template
 - Font Awesome iconic font set
 - Nette Webloader addon
-- Eyecon Bootstrap sliders
-- JQplot charts library
+- JQplot Charts library
 
 
 
