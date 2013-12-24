@@ -35,7 +35,6 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 	    	'screen.css',
 	        'bootstrap-3.0.0/less/bootstrap.less', // compiles bootstrap.css
 	        'bootstrap-3.0.0/less/variables.less', // checks if variables.less has changed (it wouldnt recompile bootstrap.less if it didnt know)
-	        'slider/css/slider.css', // bootstrap sliders
 	        'jqplot/dist/jquery.jqplot.min.css', // jqplot charts stylesheet
 	       	'jqplot.css'
 	    ));
@@ -67,7 +66,6 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 	    	'main.js', // Main JS application file
 	    	'netteForms.js', // Ajax Forms
 	    	'bootstrap-3.0.0/dist/js/bootstrap.min.js', // Bootstrap javascripts
-	    	'slider/js/bootstrap-slider.js', // Bootstrap input sliders
 	    	'jqplot/dist/jquery.jqplot.min.js' // Charts
 	    ));
 
