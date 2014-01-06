@@ -1,12 +1,10 @@
 log/*
 temp/*
-www/webtemp/*
-libs/*
-# vendor/*
-# !vendor/others
+vendor/*
+!vendor/others
 
-# .DS_Store
-# !.gitignore
-# !.htaccess
-# !web.config
-# app/config/config.local.neon
+.DS_Store
+!.gitignore
+!.htaccess
+!web.config
+app/config/config.local.neon

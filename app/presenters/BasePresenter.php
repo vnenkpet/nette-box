@@ -1,28 +1,16 @@
 <?php
 
-use Nette\Utils\Finder;
+namespace App;
+
+use Nette,
+	Model,
+	Nette\Utils\Finder;
 
 /**
- * Base class for all application presenters.
- *
- * @author     John Doe
- * @package    MyApplication
+ * Base presenter for all application presenters.
  */
 abstract class BasePresenter extends Nette\Application\UI\Presenter
 {
-	/** @var Doctrine\ORM\EntityManager */
-	protected $em;
-
-	public function injectEntityManager(\Doctrine\ORM\EntityManager $em)
-	{
-		if ($this->em) {
-			throw new \Nette\InvalidStateException('Entity manager has already been set');
-		}
-		$this->em = $em;
-		return $this;
-	}
-
-
 	/**
 	* Creates a CSS loader component.
 	*/
@@ -47,7 +35,7 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 
 	    // add CSSMin filter to the compiler
 	    $compiler->addFilter(function ($code) {
-        	return cssmin::minify($code);
+        	return \cssmin::minify($code);
     	});
 
 	    // nette komponenta pro výpis <link>ů přijímá kompilátor a cestu k adresáři na webu

@@ -1,7 +1,9 @@
 parameters:
 
 nette:
-
-services:
-
-factories:
+	database:
+		dsn: 'mysql:host=localhost;dbname=test'
+		user:
+		password:
+		options:
+			lazy: yes

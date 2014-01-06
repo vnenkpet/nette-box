@@ -1,43 +1,24 @@
 <?php
 
-/**
- * My Application bootstrap file.
- */
-use Nette\Application\Routers\Route;
+require __DIR__ . '/../vendor/autoload.php';
 
+$configurator = new Nette\Configurator;
 
-// Load Nette Framework
-require LIBS_DIR . '/autoload.php';
-
-
-// Configure application
-$configurator = new Nette\Config\Configurator;
-
-// Enable Nette Debugger for error visualisation & logging
-//$configurator->setDebugMode($configurator::AUTO);
+//$configurator->setDebugMode(TRUE);  // debug mode MUST NOT be enabled on production server
 $configurator->enableDebugger(__DIR__ . '/../log');
 
-// Enable RobotLoader - this will load all classes automatically
 $configurator->setTempDirectory(__DIR__ . '/../temp');
+
 $configurator->createRobotLoader()
-	->addDirectory(APP_DIR)
+	->addDirectory(__DIR__)
+	->addDirectory(__DIR__ . '/../vendor/others')
 	->addDirectory(LIBS_DIR . '/janmarek/webloader/WebLoader/Filter') // add webloader filters
 	->addDirectory(LIBS_DIR . '/natxet') // add CssMin filter for webloader
 	->register();
 
-\Nella\Console\Config\Extension::register($configurator);
-\Nella\Doctrine\Config\Extension::register($configurator);
-\Nella\Doctrine\Config\MigrationsExtension::register($configurator);
-
-// Create Dependency Injection container from config.neon file
 $configurator->addConfig(__DIR__ . '/config/config.neon');
+$configurator->addConfig(__DIR__ . '/config/config.local.neon');
+
 $container = $configurator->createContainer();
 
-// Setup router
-$container->router[] = new Route('index.php', 'Homepage:default', Route::ONE_WAY);
-$container->router[] = new Route('<presenter>/<action>[/<id>]', 'Homepage:default');
-
-
 return $container;
-// Configure and run the application!
-// $container->application->run();

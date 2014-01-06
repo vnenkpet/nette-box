@@ -1,34 +1,29 @@
 {
-	"name": "vnenkpet/nette-box",
-	"description": "This sandbox is a pre-packaged Nette Framework project including many front-end libraries, basic configured structure for your application. Based on David Grudl's Nette Sandbox.",
-	"homepage": "http://www.petrvnenk.com",
+	"name": "nette/sandbox",
+	"description": "The sandbox is a pre-packaged Nette Framework project, basic configured structure for your application.",
+	"homepage": "http://nette.org",
 	"type": "project",
 	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
 	"authors": [
 		{
-			"name": "Petr Vnenk",
-			"homepage": "http://www.petrvnenk.com"
+			"name": "David Grudl",
+			"homepage": "http://davidgrudl.com"
 		},
 		{
 			"name": "Nette Community",
 			"homepage": "http://nette.org/contributors"
 		}
 	],
-	"config": {
-		"vendor-dir": "libs"
-	},
 	"require": {
 		"php": ">= 5.3.0",
-		"nette/nette": ">= 2.0.7",
-		"dg/adminer-custom": "1",
+		"nette/nette": "~2.1.0",
+		"kdyby/doctrine": "@dev",
+		"dg/adminer-custom": "1.*",
 		"JanMarek/WebLoader": "dev-master",
   		"leafo/lessphp": "dev-master#85bd4557920d5f4fcbf41beb621e91b842e3621b",
-  		"natxet/CssMin": "dev-master",
-  		"nella/doctrine": "@dev",
-		"nella/console": "@dev",
-		"doctrine/migrations": "@dev"
+  		"natxet/CssMin": "dev-master"
 	},
 	"require-dev": {
-		"nette/tester": "0.9.*"
+		"nette/tester": "~0.9.5"
 	}
 }

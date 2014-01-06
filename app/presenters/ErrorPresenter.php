@@ -1,15 +1,14 @@
 <?php
 
-use Nette\Diagnostics\Debugger,
-	Nette\Application as NA;
+namespace App;
 
+use Nette,
+	Model,
+	Nette\Diagnostics\Debugger;
 
 
 /**
  * Error presenter.
- *
- * @author     John Doe
- * @package    MyApplication
  */
 class ErrorPresenter extends BasePresenter
 {
@@ -24,7 +23,7 @@ class ErrorPresenter extends BasePresenter
 			$this->payload->error = TRUE;
 			$this->terminate();
 
-		} elseif ($exception instanceof NA\BadRequestException) {
+		} elseif ($exception instanceof Nette\Application\BadRequestException) {
 			$code = $exception->getCode();
 			// load template 403.latte or 404.latte or ... 4xx.latte
 			$this->setView(in_array($code, array(403, 404, 405, 410, 500)) ? $code : '4xx');

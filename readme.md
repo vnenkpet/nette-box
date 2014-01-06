@@ -1,32 +1,41 @@
-Nette Doctrine Sandbox with Twitter Bootstrap (and more)
-===============================================
+Nette Framework Sandbox
+=======================
 
-Extended Nette sandbox application template with Twitter Bootstrap 3.0.0 ready for immediate implementation.
-
-Includes:
-
-- Nette 2 Framework
-- Doctrine 2 ORM
-- Twitter Bootstrap 3.0.0
-- Twitter Bootstrap starter template
-- Font Awesome iconic font set
-- Nette Webloader addon
-- JQplot Charts library
+The basic skeleton of application.
 
 
+What is [Nette Framework](http://nette.org)?
+--------------------------------------------
 
-Installation
-------------
+Nette Framework is a popular tool for PHP web development. It is designed to be
+the most usable and friendliest as possible. It focuses on security and
+performance and is definitely one of the safest PHP frameworks.
 
-Via composer:
+Nette Framework speaks your language and helps you to easily build better websites.
 
-```
-composer create-project vnenkpet/nette-box myProject
-```
 
-or just download the zip file and update via composer.
+Installing
+----------
 
-User's Guide
-------------
+The best way to install Nette Framework is to download latest package
+from http://nette.org/download or create new project using Composer:
 
-You can directly change variables in _www/bootstrap-3.0.0/less/variables.less_ which then auto-compiles the _bootstrap.less_ and all files from _www/css_ directory into _www/webtemp_ directory as a single minified CSS file.
+1. Install Composer: (see http://getcomposer.org/download)
+
+		curl -s http://getcomposer.org/installer | php
+
+2. Create new project via Composer:
+
+		php composer.phar create-project nette/sandbox myApplication
+		cd myApplication
+
+Make directories `temp` and `log` writable. Navigate your browser
+to the `www` directory and you will see a welcome page. PHP 5.4 allows
+you run `php -S localhost:8888 -t www` to start the web server and
+then visit `http://localhost:8888` in your browser.
+
+
+It is CRITICAL that file `app/config/config.neon` & whole `app`, `log`
+and `temp` directory are NOT accessible directly via a web browser! If you
+don't protect this directory from direct web access, anybody will be able to see
+your sensitive data. See [security warning](http://nette.org/security-warning).

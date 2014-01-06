@@ -4,50 +4,23 @@
 # If you don't protect this directory from direct web access, anybody will be able to see your passwords.
 # http://nette.org/security-warning
 #
-common:
-	parameters:
-		database:
-			driver: pdo_mysql
-			host: localhost
-			dbname: test
-			user:
-			password:
-			charset: utf8
-			collation: utf8_czech_ci
+parameters:
+
+php:
+	date.timezone: Europe/Prague
+	# zlib.output_compression: yes
+
+nette:
+	application:
+		errorPresenter: Error
+		mapping:
+			*: App\*Module\*Presenter
+
+	session:
+		expiration: 14 days
 
 
-	php:
-		date.timezone: Europe/Prague
-		session.save_path: "%tempDir%/sessions"
-		# zlib.output_compression: yes
-
-	nette:
-		session:
-			autoStart: smart
-
-	doctrine:
-		connection: %database%
-
-		console: true
-
-	migrations:
-		connection: @doctrine.connection
-
-	services:
-		database: @doctrine.entityManager
-
-		authenticator: Authenticator( @database::getRepository('User') )
-
-
-	factories:
-
-
-production < common:
-
-
-development < common:
-	parameters:
-		database:
-			dbname: test
-			user: ace
-			password: ace
+services:
+	- Model\UserManager
+	- App\RouterFactory
+	router: @App\RouterFactory::createRouter
