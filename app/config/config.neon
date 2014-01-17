@@ -24,3 +24,11 @@ services:
 	- Model\UserManager
 	- App\RouterFactory
 	router: @App\RouterFactory::createRouter
+	#articles: App\Article(@doctrine.dao(App\Article))
+
+doctrine:
+	user: root
+	password: 
+	dbname: sandbox
+	metadata:
+		App: %appDir%

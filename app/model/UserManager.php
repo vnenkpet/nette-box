@@ -8,6 +8,7 @@ use Nette,
 
 /**
  * Users management.
+ * TODO: Rewrite as a doctrine entity
  */
 class UserManager extends Nette\Object implements Nette\Security\IAuthenticator
 {

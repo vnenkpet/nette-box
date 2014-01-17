@@ -17,42 +17,43 @@
 </style>
 {/block head}
 
- {block content}
-
+{block header}
+<div class="homepage-header">
     <div class="container">
-
-      <div class="starter-template">
-
       <p class="text-left">
-      	<i class="icon-file"></i> <code>app/templates/Homepage/default.latte</code>
+        <i class="icon-file"></i> app/templates/Homepage/default.latte
       </p>
 
-        <h1>Nette with Doctrine &amp; Bootstrap starter template</h1>
-        <p class="lead">Use this document as a help to quickly start a new project.</p>
-
-      	<p>
-	      <strong>Installation:</strong> <code class="well well-sm">composer create-project vnenkpet/nette-box myProject</code>
-    	   | <a href="http://github.com/vnenkpet/nette-sandbox-with-bootstrap">On Github <i class="icon-external-link"></i></a>
-      	</p>
-      	<br />
-        <p>Includes: 
+      <h1>Nette with Doctrine &amp; Bootstrap starter template</h1>
+      <p class="lead">Use this document as a help to quickly start a new project.</p>
+      
+      <p>Includes: 
         <a href="http://www.nette.org"><span class="label label-info">Nette framework <i class="icon-external-link"></i></span></a>
         <a href="http://www.doctrine-project.org/"><span class="label label-info">Doctrine 2 ORM <i class="icon-external-link"></i></span></a>
         <a href="http://getbootstrap.com"><span class="label label-info">Twitter Bootstrap <i class="icon-external-link"></i></span></a>
         <a href="http://www.jqplot.com"><span class="label label-info"> JQPlot charts library <i class="icon-external-link"></i></span></a>
         <a href="http://forgtawesome.github.io/Font-Awesome/"><span class="label label-info"> Font Awesome iconic font <i class="icon-external-link"></i></span></a>
         <a href="http://addons.nette.org/cs/webloader"><span class="label label-info"> configured Nette webloader <i class="icon-external-link"></i></span></a></p>
-      	
+        
+    </div>
+</div>
+{/block}
 
+ {block content}
 
+      <div class="starter-template">
+
+      	<p>
+	      <strong>Installation:</strong> <code class="well well-sm">composer create-project vnenkpet/nette-box myProject</code>
+    	   | <a href="http://github.com/vnenkpet/nette-sandbox-with-bootstrap">On Github <i class="icon-external-link"></i></a>
+      	</p>
+        
       </div>
 
       <hr />
 
-      <div class="row">
       	<h2>Some examples</h2>
 
-      	<div class="col-md-7">
 	      	<h3><i class="icon-flag"></i> Font Awesome Icons</h3>
 	      	<p>Just a few examples:</p>
 
@@ -83,8 +84,7 @@
 	      		<i class="icon-caret-right"></i> <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome documentation <i class="icon-external-link"></i></a>
 	      	</p>
 
-      	</div>
-      	<div class="col-md-5">
+
       		<h3><i class="icon-bar-chart"></i> JQPlot Test Chart</h3>
       		
       		<p>Check <code>app/templates/Homepage/default.latte</code> javascripts at the bottom of the file.</p>
@@ -96,16 +96,6 @@
       		<p class="text-right">
       			<i class="icon-caret-right"></i> <a href="http://www.jqplot.com">JQPlot documentation <i class="icon-external-link"></i></a>
       		</p>
-      	</div>
-      </div>
-
-      	<footer>
-			&copy; Petr Vnenk, 2013
-		</footer>
-
-    </div><!-- /.container -->
-
-
 
  {/block}
 

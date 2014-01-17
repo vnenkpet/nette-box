@@ -37,8 +37,6 @@
 
   <script> document.documentElement.className+=' js' </script>
 
-  <div n:foreach="$flashes as $flash" class="alert alert-{$flash->type}">{$flash->message}</div>
-
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -59,8 +57,19 @@
       </div>
     </div>
 
+    {include #header}
+    
+    <div class="container">
+
+
+    <div n:foreach="$flashes as $flash" class="alert alert-{$flash->type}">{$flash->message}</div>
+
     {include #content}
 
+    <footer>
+      <span class="author">&copy; Petr Vnenk, <a class="author-site" href="http://www.petrvnenk.com">www.petrvnenk.com</a>, 2014</span>
+    </footer>
+    </div>
 
   {* load Javascripts *}
 	{control js}

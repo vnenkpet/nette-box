@@ -19,6 +19,11 @@ $configurator->createRobotLoader()
 $configurator->addConfig(__DIR__ . '/config/config.neon');
 $configurator->addConfig(__DIR__ . '/config/config.local.neon');
 
+Kdyby\Annotations\DI\AnnotationsExtension::register($configurator);
+Kdyby\Console\DI\ConsoleExtension::register($configurator);
+Kdyby\Events\DI\EventsExtension::register($configurator);
+Kdyby\Doctrine\DI\OrmExtension::register($configurator);
+
 $container = $configurator->createContainer();
 
 return $container;
